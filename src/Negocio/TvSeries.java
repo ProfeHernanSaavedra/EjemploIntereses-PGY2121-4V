@@ -27,7 +27,15 @@ public class TvSeries extends Interes{
 
     @Override
     public String toString() {
-        return "TvSeries{" + "genero=" + genero + '}';
+        return super.toString() + " TvSeries{" + "genero=" + genero + '}';
+    }
+
+    @Override
+    public void metodoSobreescrito() {
+        
+        System.out.println("Usuario: " + this.getUsuario());
+        System.out.println("Genero: " + this.getGenero());
+    
     }
     
     

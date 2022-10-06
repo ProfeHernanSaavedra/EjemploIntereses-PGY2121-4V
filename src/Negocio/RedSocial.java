@@ -26,7 +26,13 @@ public class RedSocial extends Interes{
 
     @Override
     public String toString() {
-        return "RedSocial{" + "nombreRedsocial=" + nombreRedsocial + '}';
+        return super.toString() + " RedSocial{" + "nombreRedsocial=" + nombreRedsocial + '}';
+    }
+
+    @Override
+    public void metodoSobreescrito() {
+        System.out.println("Usuario: " + this.getUsuario());
+        System.out.println("Nombre Red Social: " + this.getNombreRedsocial());
     }
 
     

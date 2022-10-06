@@ -5,7 +5,7 @@ package Negocio;
  *
  * @author USRVI-LC2
  */
-public class Interes {
+public abstract class Interes {
     
     protected String usuario,pass;
     protected int tiempoConectado;
@@ -48,6 +48,7 @@ public class Interes {
         return "Interes{" + "usuario=" + usuario + ", pass=" + pass + ", tiempoConectado=" + tiempoConectado + '}';
     }
     
+    public abstract void metodoSobreescrito();
     
     
 }

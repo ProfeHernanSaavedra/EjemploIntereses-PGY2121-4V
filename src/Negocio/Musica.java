@@ -5,7 +5,7 @@ package Negocio;
  *
  * @author USRVI-LC2
  */
-public class Musica extends Interes{
+public class Musica extends Interes implements ILike{
     
     private String tipoMusica;
 
@@ -27,9 +27,23 @@ public class Musica extends Interes{
 
     @Override
     public String toString() {
-        return "Musica{" + "tipoMusica=" + tipoMusica + '}';
+        return super.toString()+ " Musica{" + "tipoMusica=" + tipoMusica + '}';
+    }
+
+    @Override
+    public void metodoSobreescrito() {
+        //System.out.println("Usuario: " + super.getUsuario());
+        System.out.println("Usuario: " + this.getUsuario());
+        System.out.println("Tipo Musica: " + this.getTipoMusica());
+    }
+
+    @Override
+    public void likes(int likes) {
+        System.out.println(" Cantidad de Likes es: " + likes);
+        System.out.println("Tiempo Conectado: " + this.getTiempoConectado());
     }
     
+   
     
     
     
