@@ -16,6 +16,12 @@ public class RedSocial extends Interes{
         this.nombreRedsocial = nombreRedsocial;
     }
 
+    public RedSocial(String nombreRedsocial, int tiempoConectado, int like) {
+        super(tiempoConectado, like);
+        this.nombreRedsocial = nombreRedsocial;
+    }
+    
+    
     public String getNombreRedsocial() {
         return nombreRedsocial;
     }

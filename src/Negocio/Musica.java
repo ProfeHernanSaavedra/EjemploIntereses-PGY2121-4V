@@ -17,6 +17,12 @@ public class Musica extends Interes implements ILike{
         this.tipoMusica = tipoMusica;
     }
 
+    public Musica(String tipoMusica, int tiempoConectado, int like) {
+        super(tiempoConectado, like);
+        this.tipoMusica = tipoMusica;
+    }
+
+    
     public String getTipoMusica() {
         return tipoMusica;
     }

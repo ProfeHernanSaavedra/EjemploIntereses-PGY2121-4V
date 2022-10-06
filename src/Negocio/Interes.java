@@ -9,6 +9,7 @@ public abstract class Interes {
     
     protected String usuario,pass;
     protected int tiempoConectado;
+    protected int like;
 
     public Interes() {
     }
@@ -17,6 +18,19 @@ public abstract class Interes {
         this.usuario = usuario;
         this.pass = pass;
         this.tiempoConectado = tiempoConectado;
+    }
+
+    public Interes(int tiempoConectado, int like) {
+        this.tiempoConectado = tiempoConectado;
+        this.like = like;
+    }
+
+    public void setLike(int like) {
+        this.like = like;
+    }
+
+    public int getLike() {
+        return like;
     }
 
     public String getUsuario() {
@@ -45,7 +59,7 @@ public abstract class Interes {
 
     @Override
     public String toString() {
-        return "Interes{" + "usuario=" + usuario + ", pass=" + pass + ", tiempoConectado=" + tiempoConectado + '}';
+        return "Interes{" + "usuario=" + usuario + ", pass=" + pass + ", tiempoConectado=" + tiempoConectado + " Likes: " + like+'}';
     }
     
     public abstract void metodoSobreescrito();
