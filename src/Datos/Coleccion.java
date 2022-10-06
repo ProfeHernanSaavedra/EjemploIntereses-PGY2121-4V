@@ -3,6 +3,7 @@ package Datos;
 
 import Negocio.Interes;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -54,6 +55,7 @@ public class Coleccion {
                 clase = interes.getClass().getSimpleName();
             }
         }
+        JOptionPane.showMessageDialog(null,"El tema con mas tiempo conectado es: " + clase , "Aviso", 1);
         System.out.println("El tema con mas tiempo conectado es: " + clase);
     }
     

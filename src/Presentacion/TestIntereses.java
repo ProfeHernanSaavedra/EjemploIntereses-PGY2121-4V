@@ -3,6 +3,7 @@ package Presentacion;
 
 import Datos.Coleccion;
 import Negocio.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -12,7 +13,13 @@ public class TestIntereses {
     
     public static void main(String[] args) {
         
-        Interes musica = new Musica("POP",120,5);
+        String tipo = JOptionPane.showInputDialog(null, "Ingrese Tipo Musica: ","Ingreso",1);
+        String tiempoDur = JOptionPane.showInputDialog(null, "Ingrese Tiempo duracion: ","Ingreso",1);
+        int tiempoC = Integer.parseInt(tiempoDur);
+        String likeStr = JOptionPane.showInputDialog(null, "Ingrese Likes: ","Ingreso",1);
+        int likeInt = Integer.parseInt(likeStr);
+        
+        Interes musica = new Musica(tipo,tiempoC,likeInt);
         musica.setUsuario("Juanito");
         musica.setPass("123");
         RedSocial rs = new RedSocial("Instagram",240,10);
